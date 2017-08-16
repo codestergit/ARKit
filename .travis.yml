@@ -1,0 +1,13 @@
+sudo: required
+
+osx_image: xcode9
+
+before_install:
+  - brew update
+  - brew outdated xctool || brew upgrade xctool
+
+install:
+  - brew install swiftlint
+
+script:
+  - swiftlint
